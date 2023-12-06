@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(22, 76, 100);
+}
+
+.main {
+    border: 1px solid white;
+    margin: 20px auto;
+    width: 600px;
+    height: 602px;
+}
+
+.main div {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: red;
+    position: relative;
+    animation: FirstBall;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes FirstBall {
+    0% {top: -250px}
+    100% {top: 0;}
+}
+
+#yellow {
+    background-color: yellow; 
+    position: relative;
+    animation: SecondBall;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite; 
+    opacity: 0; 
+}
+@keyframes SecondBall {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#green {
+    background-color: green;
+    position: relative;
+    animation: ThirdBall;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ThirdBall {
+    from {
+        transform:rotateY(0deg);
+    }
+    to {
+        transform:rotateY(360deg);
+    }
+}
